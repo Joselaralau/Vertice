@@ -80,14 +80,18 @@ h1 span{
 /* FORZAR 3 COLUMNAS EN CELULAR */
 @media screen and (max-width: 600px) {
     .img-gallery {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 8px !important;
+        /* Aseguramos que sea una grilla */
+        display: grid;
+        /* Forzamos 3 columnas de igual ancho */
+        grid-template-columns: repeat(3, 1fr);
+        /* Reducimos la separación en móvil */
+        gap: 8px;
     }
 
     .img-gallery img {
-        width: 100% !important;
+        width: 100%;
         height: auto;
+        /* Asegura que la imagen se ajuste a las dimensiones */
         object-fit: cover;
     }
 }
