@@ -51,37 +51,4 @@ header input {
 
 }
 
-/* --- Estilos para Escritorio (ej. a partir de 1024px) --- */
-@media(min-width: 1024px) {
-    /* Ocultamos el submenú por defecto en desktop */
-    .submenu {
-        display: none;
-        position: absolute; /* Es crucial para que aparezca sobre el contenido */
-        top: 100%; /* Lo posiciona justo debajo del elemento padre (el link principal) */
-        left: 0;
-        min-width: 200px;
-        z-index: 3000;
-        background: rgba(0, 0, 0, 0.7); 
-    }
 
-    /* ESTO HACE EL TRABAJO: Muestra el submenú al pasar el ratón */
-    .has-submenu:hover > .submenu {
-        display: block;
-    }
-
-    /* Opcional: Asegúrate de que el JS no fuerce la apertura del submenú en desktop */
-    .has-submenu.open .submenu {
-        display: none; 
-    }
-}
-
-/* También es buena práctica resetear la altura del menú en desktop */
-@media(min-width: 1024px) {
-    .menu {
-        position: static;
-        height: auto !important; /* Sobrescribe la altura fija de móvil */
-        display: flex;
-        background: transparent;
-        width: auto;
-    }
-}
