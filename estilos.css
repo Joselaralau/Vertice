@@ -1230,6 +1230,10 @@ ul, ol {
 .icon-th-list {
 	display: none;
 }
+/* Dentro de un media query grande y al final del archivo */
+.icon-th-list {
+	display: none;
+}
 @media (min-width:1024px) {
     #btnmenu {
         display: none;
