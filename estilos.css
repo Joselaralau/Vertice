@@ -1348,7 +1348,6 @@ ul, ol {
     overflow: hidden;
     transition: height .3s linear;
 }
-
 /* Clase activada por JS al abrir el menú */
 .mostrar {
     height: 340px; /* Ajusta según cantidad de items */
@@ -1365,4 +1364,13 @@ ul, ol {
 /* Hover en móvil y desktop */
 .menu__link:hover {
     background: #060E4D;
+}
+
+@media(min-width: 1024px) {
+    .menu {
+        position: static;
+        height: auto;
+        display: flex;
+        background: transparent;
+    }
 }
