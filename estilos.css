@@ -1315,3 +1315,9 @@ ul, ol {
         background: transparent;
     }
 }
+.banner {
+    margin-top: 0;
+}
+.icon-th-list {
+    display: none;
+}
