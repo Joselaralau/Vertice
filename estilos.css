@@ -208,23 +208,7 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9 {
 	font-size: 1.5em; 	
 }
 
-.social-icon {
-	display: flex;
-	justify-content: space-between;
-}
 
-.social-icon [class*="icon-"] {
-	color: black;
-	margin-left: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.3em;
-	width: 35px;
-	height: 35px;
-	background: white;
-	border-radius: 50%;
-}
 
  
 .menu li ul {
@@ -315,11 +299,6 @@ ul, ol {
 }
 
 
-
-
-.social-icon__link {
-	text-decoration: none;
-}
 
 .menu {
 	position: absolute;
@@ -1320,29 +1299,4 @@ ul, ol {
 }
 .icon-th-list {
 	display: none;
-}
-
-
-@media (min-width: 1024px) {
-	.social-icon {
-		display: flex;
-		margin-left: auto;
-		gap: 10px;
-	}
-
-	.social-icon a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 35px;
-		height: 35px;
-		background: white;
-		border-radius: 50%;
-		text-decoration: none;
-	}
-
-	.social-icon span {
-		color: black;
-		font-size: 1.3em;
-	}
 }
