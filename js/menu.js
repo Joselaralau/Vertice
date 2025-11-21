@@ -1,64 +1,63 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('JavaScript cargado correctamente');
-    
     let btnMenu = document.getElementById('btnmenu');
     let menu = document.getElementById('menu');
 
-    // Toggle del menú principal en móvil
+    // Función para saber si estamos en un tamaño de pantalla "móvil" (menor a 1024px)
+    function isMobileSize() {
+        return window.innerWidth < 1024;
+    }
+
+    // 1. Toggle del menú principal en móvil
     if (btnMenu) {
         btnMenu.addEventListener('click', function() {
-            console.log('Botón menú clickeado');
             menu.classList.toggle('mostrar');
         });
     }
 
-    // Submenú para TODOS los dispositivos
+    // 2. Lógica del Submenú: Clic en móvil, Hover en desktop
     const submenuLinks = document.querySelectorAll('.has-submenu > a');
-    console.log('Enlaces de submenú encontrados:', submenuLinks.length);
     
     submenuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            console.log('Clic en submenú:', this.textContent);
-            
-            // Prevenir el comportamiento por defecto
-            e.preventDefault();
-            e.stopPropagation();
+        
+        const clickHandler = function(e) {
+            // ⭐ CLAVE: Solo ejecuta la lógica de clic si es tamaño móvil
+            if (isMobileSize()) {
+                e.preventDefault(); // Evita ir al enlace
+                e.stopPropagation();
 
-            const parentLi = this.parentElement;
-            const isOpen = parentLi.classList.contains('open');
+                const parentLi = this.parentElement;
+                const isOpen = parentLi.classList.contains('open');
 
-            // Cerrar otros submenús
-            document.querySelectorAll('.has-submenu').forEach(item => {
-                if (item !== parentLi) {
-                    item.classList.remove('open');
+                // Cierra otros submenús abiertos por clic
+                if (menu.classList.contains('mostrar')) {
+                    document.querySelectorAll('.has-submenu').forEach(item => {
+                        if (item !== parentLi) {
+                            item.classList.remove('open');
+                        }
+                    });
                 }
-            });
-
-            // Abrir/cerrar el submenú actual
-            if (!isOpen) {
-                parentLi.classList.add('open');
-                console.log('Submenú abierto');
-            } else {
-                parentLi.classList.remove('open');
-                console.log('Submenú cerrado');
+                
+                // Abre/cierra el submenú actual
+                if (!isOpen) {
+                    parentLi.classList.add('open');
+                } else {
+                    parentLi.classList.remove('open');
+                }
             }
-        });
+            // Si NO es tamaño móvil (desktop), el evento NO se previene
+            // y el submenú funciona con el CSS :hover
+        };
+
+        link.addEventListener('click', clickHandler);
     });
 
-    // Cerrar submenús al hacer clic fuera
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.has-submenu') && !e.target.closest('#btnmenu')) {
-            document.querySelectorAll('.has-submenu').forEach(item => {
+    // 3. Cerrar submenús al redimensionar la ventana
+    window.addEventListener('resize', function() {
+        if (!isMobileSize()) {
+             // Si pasamos a desktop, limpiamos la clase 'open' de móvil
+             document.querySelectorAll('.has-submenu').forEach(item => {
                 item.classList.remove('open');
             });
-            console.log('Submenús cerrados (clic fuera)');
         }
-    });
-
-    // Cerrar submenús al redimensionar la ventana
-    window.addEventListener('resize', function() {
-        document.querySelectorAll('.has-submenu').forEach(item => {
-            item.classList.remove('open');
-        });
     });
 });
