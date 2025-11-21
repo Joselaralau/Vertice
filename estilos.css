@@ -1082,15 +1082,6 @@ ul, ol {
         display: none;
 	}
 
-
-
-	.menu {
-		position: static;
-		display: flex;
-		height: auto;
-		width: auto;
-	}
-
 	.menu__link {
 		padding: 20px;
 	}
@@ -1178,12 +1169,6 @@ ul, ol {
         display: none;
 	}
 
-	.menu {
-		position: static;
-		display: flex;
-		height: auto;
-		width: auto;
-	}
 
 
 
