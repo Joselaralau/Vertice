@@ -15,10 +15,6 @@ body {
 
 
 
-
-
-
-
 /*------------------------------------------ESTILOS BASE-----------------------------------------------*/
 
 
@@ -90,7 +86,7 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9 {
 
 
 .banner__img {
-	height: 100vh;
+	height: 600px;
 	object-fit: cover;	
 }
 .menu__link:hover {
@@ -146,7 +142,17 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9 {
 }
 
 
+.main-header__contactInfo__phone {
+	background: #000;
+	color: white;
+	margin: 0 auto;
+	padding: 10px;
+}
 
+.main-header__contactInfo__address {
+	padding: 10px;
+	margin: 0;
+}
 .main-header [class*="icon-"]:before {
 	position: relative;
 	top: 2px;
@@ -164,7 +170,6 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9 {
 
 .icon-whatsapp {
 	font-size: 16px;
-	text-align: right;
 }
 
 
@@ -199,7 +204,23 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9 {
 	font-size: 1.5em; 	
 }
 
+.social-icon {
+	display: flex;
+	justify-content: space-between;
+}
 
+.social-icon [class*="icon-"] {
+	color: black;
+	margin-left: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.3em;
+	width: 35px;
+	height: 35px;
+	background: white;
+	border-radius: 50%;
+}
 
  
 .menu li ul {
@@ -281,7 +302,56 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9 {
   ESTILOS PARA DESKTOP (HOVER)
 -----------------------------------*/
 
+@media(min-width: 1024px) {
 
+	/* restablece menú normal */
+	.menu {
+		position: static;
+		height: auto;
+		display: flex;
+		background: transparent;
+	}
+
+	.menu li {
+		position: relative;
+	}
+
+	/* Hover abre submenú */
+	.menu li:hover > .submenu {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 200px;
+	}
+
+	.submenu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 200px;
+		background: rgba(0,0,0,.8);
+		display: none;
+		z-index: 3000;
+	}
+
+	.submenu li a {
+		padding: 12px 15px;
+		display: block;
+		color: white;
+		text-decoration: none;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+	}
+	
+	.submenu li a:hover {
+		background: #060E4D;
+	}
+
+	/* Oculta el botón hamburguesa */
+	.icon-th-list {
+		display: none;
+	}
+}
 
 
 ul, ol {
@@ -290,6 +360,11 @@ ul, ol {
 }
 
 
+
+
+.social-icon__link {
+	text-decoration: none;
+}
 
 .menu {
 	position: absolute;
@@ -360,7 +435,7 @@ ul, ol {
 }
 
 .banner__img {
-	height: 100vh;
+	height: 600px;
 	object-fit: cover;	
 }
 .banner img {
@@ -381,7 +456,7 @@ ul, ol {
 }
 
 .banner__content p {
-	font-size: clamp(1.2em, 5vw, 3em);;
+	font-size: 3.3em;
 	font-weight: normal;
 }
 
@@ -501,7 +576,7 @@ ul, ol {
 	text-decoration: none;
 }
 
-.main-footer [class*="icon-"]::before {
+.main-footer [class*="icon-"]: before {
 	position: relative;
 	top: 3px;
 	right: 5px;
@@ -514,7 +589,20 @@ ul, ol {
 /*----------------------ESTILOS RESPONSIVE-----------------------------*/
 @media screen and (min-width:180px) {
 
-   
+   .main-header__contactInfo__phone {
+        background: none;     
+    }
+    /* baner*/
+    
+    .main-header__contactInfo__address {
+        color: white;  
+    }
+
+    .main-header__contactInfo {
+		text-align: right;
+		padding:0px;
+		margin: 0px;
+	}
 
 	.logo-container img {
 		width: 35%;
@@ -578,7 +666,21 @@ ul, ol {
 	.contact .container--flex {
 	align-items: flex-start;
 	}
-	
+	.main-header__contactInfo {
+		text-align: right;
+		line-height: 1px;
+	}
+    /*anner__content*/
+		
+		
+   .main-header__contactInfo__phone {
+        background: none;     
+    }
+    
+    
+    .main-header__contactInfo__address {
+        color: white;  
+    }
 
     .banner__content p {
     	font-size: 1.2em;
@@ -679,6 +781,22 @@ ul, ol {
 	/*anner*/
 	
 
+	.main-header__contactInfo {
+		text-align: right;
+	}
+    .banner__content {
+		top: 61%;
+	}
+		
+		
+   .main-header__contactInfo__phone {
+        background: none;     
+    }
+    
+    
+    .main-header__contactInfo__address {
+        color: white;  
+    }
 
     /*anner__content*/
 
@@ -794,7 +912,7 @@ ul, ol {
 	}
 
 	.main__about__description .column--50:nth-child(2) {
-		font-size: 1em;
+		font.size: 1em;
 	}
 	.main__about__description .column--50:nth-child(2) .column__txt {
 		line-height: 25px;
@@ -864,7 +982,7 @@ ul, ol {
 	}
 
 	.main__about__description .column--50:nth-child(2) {
-		font-size: 1em;
+		font.size: 1em;
 	}
 	.main__about__description .column--50:nth-child(2) .column__txt {
 		line-height: 25px;
@@ -923,6 +1041,23 @@ ul, ol {
     }
 }
 
+@media screen and (min-width:1024px) {
+
+	.container {
+		width: 1000px;
+	}
+
+	.logo {
+
+		padding: 0;
+	}
+
+
+	.main-header__contactInfo__phone,
+	.main-header__contactInfo__address {
+		padding-right: 0px;
+		font-size:1.15em;
+	}
 
 	.main-header a {
 		padding-right: 0px;
@@ -941,6 +1076,15 @@ ul, ol {
 
 	.icon-th-list {
         display: none;
+	}
+
+
+
+	.menu {
+		position: static;
+		display: flex;
+		height: auto;
+		width: auto;
 	}
 
 	.menu__link {
@@ -988,7 +1132,7 @@ ul, ol {
 	.slogan img{
 		width: 18%;
 	}
-
+}
 
 /* CORREGIDO: Media query con sintaxis correcta */
 @media screen and (orientation:landscape) and (min-width:1024px) {
@@ -1003,6 +1147,11 @@ ul, ol {
 	}
 
 
+	.main-header__contactInfo__phone,
+	.main-header__contactInfo__address {
+		padding-right: 0px;
+		font-size:1.15em;
+	}
 
 	.main-header a {
 		padding-right: 0px;
@@ -1025,6 +1174,12 @@ ul, ol {
         display: none;
 	}
 
+	.menu {
+		position: static;
+		display: flex;
+		height: auto;
+		width: auto;
+	}
 
 
 
@@ -1187,52 +1342,4 @@ ul, ol {
 	.slogan img{
 		width: 18%;
 	}
-}
-
-/* ----- MENÚ MÓVIL ----- */
-.menu {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: rgba(0,0,0,.55);
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    list-style: none;
-    height: 0;
-    overflow: hidden;
-    transition: height .3s linear;
-}
-/* Clase activada por JS al abrir el menú */
-.mostrar {
-    height: 340px; /* Ajusta según cantidad de items */
-}
-
-/* Links del menú */
-.menu__link {
-    display: block;
-    padding: 15px;
-    color: white;
-    text-decoration: none;
-}
-
-/* Hover en móvil y desktop */
-.menu__link:hover {
-    background: #060E4D;
-}
-
-@media(min-width: 1024px) {
-    .menu {
-        position: static;
-        height: auto;
-        display: flex;
-        background: transparent;
-    }
-}
-.banner {
-    margin-top: 0;
-}
-.icon-th-list {
-	display: none;
 }
