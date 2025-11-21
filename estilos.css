@@ -1364,11 +1364,12 @@ ul, ol {
     transition: height .3s linear;
 }
 
-/* Lo que activa JS */
+/* Clase activada por JS al abrir el menú */
 .mostrar {
-    height: 340px; /* ajusta si agregas más items */
+    height: 340px; /* Ajusta según cantidad de items */
 }
 
+/* Links del menú */
 .menu__link {
     display: block;
     padding: 15px;
@@ -1376,6 +1377,7 @@ ul, ol {
     text-decoration: none;
 }
 
+/* Hover en móvil y desktop */
 .menu__link:hover {
     background: #060E4D;
 }
