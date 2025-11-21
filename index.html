@@ -40,24 +40,39 @@
 		<br>
 
 		<nav class="main-nav">
-			<div class="container container--flex">
-				<span class="icon-th-list" id="btnmenu"></span>
-				<ul class="menu" id="menu">
-					<li class="menu__item"><a href="index.html" class="menu__link menu__link--select">Vértice</a></li>
-			   	    <li class="menu__item has-submenu"><a href="red.html" class="menu__link">Red Publicitaria</a>
-						<ul class="submenu" id="submenu-red"> 
-							<li class="menu__item"><a href="corporativos.html"class="menu__link">Corporativos</a></li>
-							<li class="menu__item"><a href="hospitales.html" class="menu__link">Hospitales</a></li>
-							<li class="menu__item"><a href="centroscomerciales.html"class="menu__link">Centros Comerciales</a></li>
-							<li class="menu__item"><a href="residenciales.html"class="menu__link">Residenciales</a></li>
-						</ul>
-					</li>
-					<li class="menu__item"><a href="edificios.html" class="menu__link">Vértice en tu edificio</a></li>
-					<li class="menu__item"><a href="digital.html" class="menu__link">Digital Signage</a></li>
-					<li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
-				</ul>
-			</div>
-		</nav>
+    <div class="container container--flex">
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <span class="icon-th-list" id="btnmenu"></span>
+
+        <!-- MENÚ -->
+        <ul class="menu" id="menu">
+            <li class="menu__item"><a href="index.html" class="menu__link menu__link--select">Vértice</a></li>
+
+            <li class="menu__item has-submenu">
+                <a href="#" class="menu__link">Red Publicitaria</a>
+                <ul class="submenu">
+                    <li class="menu__item"><a href="corporativos.html" class="menu__link">Corporativos</a></li>
+                    <li class="menu__item"><a href="hospitales.html" class="menu__link">Hospitales</a></li>
+                    <li class="menu__item"><a href="centroscomerciales.html" class="menu__link">Centros Comerciales</a></li>
+                    <li class="menu__item"><a href="residenciales.html" class="menu__link">Residenciales</a></li>
+                </ul>
+            </li>
+
+            <li class="menu__item"><a href="edificios.html" class="menu__link">Vértice en tu edificio</a></li>
+            <li class="menu__item"><a href="digital.html" class="menu__link">Digital Signage</a></li>
+            <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
+        </ul>
+
+        <!-- ICONOS DERECHA -->
+        <div class="social-icon">
+            <a href="https://www.facebook.com/VerticeTVmedios/" class="social-icon__link"><span class="icon-facebook-squared"></span></a>
+            <a href="https://twitter.com/verticetv_mx?s=17" class="social-icon__link"><span class="icon-twitter-squared"></span></a>
+            <a href="contacto.html" class="social-icon__link"><span class="icon-mail-alt"></span></a>
+        </div>
+
+    </div>
+</nav>
 
 
 		<section class="banner">
@@ -97,8 +112,6 @@
 				</div>
 		</main>
 		<br>
-		<div class="ful-img" id="fulImgBox">
-      <img src="imgs/1.jpg" id="fulImg" alt="">
       <span onclick="closeImg()">X</span>
     </div>
 
