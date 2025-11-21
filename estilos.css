@@ -146,17 +146,7 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9 {
 }
 
 
-.main-header__contactInfo__phone {
-	background: #000;
-	color: white;
-	margin: 0 auto;
-	padding: 10px;
-}
 
-.main-header__contactInfo__address {
-	padding: 10px;
-	margin: 0;
-}
 .main-header [class*="icon-"]:before {
 	position: relative;
 	top: 2px;
@@ -523,20 +513,7 @@ ul, ol {
 /*----------------------ESTILOS RESPONSIVE-----------------------------*/
 @media screen and (min-width:180px) {
 
-   .main-header__contactInfo__phone {
-        background: none;     
-    }
-    /* baner*/
-    
-    .main-header__contactInfo__address {
-        color: white;  
-    }
-
-    .main-header__contactInfo {
-		text-align: right;
-		padding:0px;
-		margin: 0px;
-	}
+   
 
 	.logo-container img {
 		width: 35%;
@@ -600,21 +577,7 @@ ul, ol {
 	.contact .container--flex {
 	align-items: flex-start;
 	}
-	.main-header__contactInfo {
-		text-align: right;
-		line-height: 1px;
-	}
-    /*anner__content*/
-		
-		
-   .main-header__contactInfo__phone {
-        background: none;     
-    }
-    
-    
-    .main-header__contactInfo__address {
-        color: white;  
-    }
+	
 
     .banner__content p {
     	font-size: 1.2em;
@@ -715,22 +678,6 @@ ul, ol {
 	/*anner*/
 	
 
-	.main-header__contactInfo {
-		text-align: right;
-	}
-    .banner__content {
-		top: 61%;
-	}
-		
-		
-   .main-header__contactInfo__phone {
-        background: none;     
-    }
-    
-    
-    .main-header__contactInfo__address {
-        color: white;  
-    }
 
     /*anner__content*/
 
@@ -976,13 +923,6 @@ ul, ol {
 }
 
 
-
-	.main-header__contactInfo__phone,
-	.main-header__contactInfo__address {
-		padding-right: 0px;
-		font-size:1.15em;
-	}
-
 	.main-header a {
 		padding-right: 0px;
 		font-size: 1.15em;
@@ -1062,11 +1002,6 @@ ul, ol {
 	}
 
 
-	.main-header__contactInfo__phone,
-	.main-header__contactInfo__address {
-		padding-right: 0px;
-		font-size:1.15em;
-	}
 
 	.main-header a {
 		padding-right: 0px;
