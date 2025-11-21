@@ -8,13 +8,10 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
       <link rel="icon" href="fotos/vertice_buscador.jpg" type="image/jpg">
-	  <link rel="stylesheet" href="fontello/css/fontello.css">
-  	  <link rel="stylesheet" href="estilos.css">
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="contacto.css">
-     <link rel="stylesheet" href="menu.css">
-	 <script src="script.js"></script>
-	 <script src="menu.js"></script>
+	    <link rel="stylesheet" href="fontello/css/fontello.css">
+  	  <link rel="stylesheet" href="css/estilos.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/contacto.css">
     </head>
     
     <body background="#F9F9F9">
@@ -25,6 +22,12 @@
     				<img src="logo_vertice_-01.png"></img>
     			</div>
     			<div class="main-header__contactInfo column column--50">
+					<p class="main-header__contactInfo__phone">
+					<span class="icon-phone">55 5405 1074</span>
+					</p>
+					<p class="main-header__contactInfo__address">
+					<span class="icon-direction">CDMX</span>
+					</p>
 					<a href="https://api.whatsapp.com/send?phone=525554051074">
 						<span class="icon-whatsapp">55 5405 1074</span>
 					</a>
@@ -44,7 +47,7 @@
 			<div class="container container--flex">
 				<span class="icon-th-list" id="btnmenu"></span>
 				<ul class="menu" id="menu">
-					<li class="menu__item"><a href="index.html" class="menu__link menu__link--select">Vértice</a></li>
+					<li class="menu__item"><a href="/" class="menu__link menu__link--select">Vértice</a></li>
 			   	    <li class="menu__item has-submenu"><a href="red.html" class="menu__link">Red Publicitaria</a>
 						<ul class="submenu" id="submenu-red"> 
 							<li class="menu__item"><a href="corporativos.html"class="menu__link">Corporativos</a></li>
@@ -57,12 +60,17 @@
 					<li class="menu__item"><a href="digital.html" class="menu__link">Digital Signage</a></li>
 					<li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
 				</ul>
+				<div class="social-icon">
+					<a href="https://www.facebook.com/VerticeTVmedios/" class="social-icon__link"><span class="icon-facebook-squared"></span></a>
+					<a href="https://twitter.com/verticetv_mx?s=17" class="social-icon__link"><span class="icon-twitter-squared"></span></a>
+					<a href="contacto.html" class="social-icon__link"><span class="icon-mail-alt"></span></a>
+				</div>
 			</div>
 		</nav>
 
 
 		<section class="banner">
-				<img src="fotos/FONDO_INDEX_30625.jpg" alt="" class="banner__img">
+				<img src="fotos/FONDO_INDEX_30625.jpg" alt="" class="banner__img"></img>
 				<div class="banner__content">
 					<p><b>VÉRTICE</b>
 						<br>Es la red de publicidad  digital
@@ -98,6 +106,8 @@
 				</div>
 		</main>
 		<br>
+		<div class="ful-img" id="fulImgBox">
+      <img src="imgs/1.jpg" id="fulImg" alt="">
       <span onclick="closeImg()">X</span>
     </div>
 
@@ -225,6 +235,6 @@
 
   gtag('config', 'UA-167334712-1');
 </script>
-
+<script src="script.js"></script>
 
 </html>
