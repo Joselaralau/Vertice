@@ -1068,7 +1068,7 @@ ul, ol {
 	.slogan img{
 		width: 18%;
 	}
-}
+
 
 /* CORREGIDO: Media query con sintaxis correcta */
 @media screen and (orientation:landscape) and (min-width:1024px) {
