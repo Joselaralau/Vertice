@@ -1319,5 +1319,30 @@ ul, ol {
     margin-top: 0;
 }
 .icon-th-list {
-    display: none;
+	display: none;
+}
+
+
+@media (min-width: 1024px) {
+	.social-icon {
+		display: flex;
+		margin-left: auto;
+		gap: 10px;
+	}
+
+	.social-icon a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 35px;
+		height: 35px;
+		background: white;
+		border-radius: 50%;
+		text-decoration: none;
+	}
+
+	.social-icon span {
+		color: black;
+		font-size: 1.3em;
+	}
 }
