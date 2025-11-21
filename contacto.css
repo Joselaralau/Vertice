@@ -312,4 +312,18 @@ body {
 		font-size: 2em; 
 	}
 }
-	/*anner__content 
+	/*anner__content */
+
+	@media screen and (max-width: 600px) {
+
+    .img-gallery {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px;
+    }
+
+    .img-gallery img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
