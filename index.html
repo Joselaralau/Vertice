@@ -12,7 +12,6 @@
   	  <link rel="stylesheet" href="css/estilos.css">
      <link rel="stylesheet" href="css/style.css">
      <link rel="stylesheet" href="css/contacto.css">
-	 <script src="script.js"></script>
 	 <script src="js/menu.js"></script>
     </head>
     
@@ -210,21 +209,7 @@
 
 		<script src="js/menu.js"></script>
 
-		<script>
-         document.addEventListener('DOMContentLoaded', function(){
-
-         const enlacesSubmenu = document.querySelectorAll('.has-submenu > a');
-
-         enlacesSubmenu.forEach(enlace => {
-         enlace.addEventListener('click', function(e){
-            e.preventDefault(); // evita que se vaya a red.html en móvil
-            const li = this.parentElement;
-            li.classList.toggle('open'); // abre o cierra el submenú
-         });
-         });
-
-        });
-        </script>
+	
 	
 	</body>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
