@@ -13,6 +13,13 @@ body {
 	margin: 0;
 }
 
+.icon-whatsapp{
+	text-align: right;
+}
+
+
+
+
 
 /*------------------------------------------ESTILOS BASE-----------------------------------------------*/
 
@@ -1229,13 +1236,4 @@ ul, ol {
 }
 .icon-th-list {
 	display: none;
-}
-/* Dentro de un media query grande y al final del archivo */
-.icon-th-list {
-	display: none;
-}
-@media (min-width:1024px) {
-    #btnmenu {
-        display: none;
-    }
 }
